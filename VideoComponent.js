@@ -4,6 +4,7 @@ import { View, Text, TouchableWithoutFeedback, StyleSheet, Dimensions } from 're
 import Video from 'react-native-video'
 import ProgressBar from 'react-native-progress/Bar'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import * as Progress from 'react-native-progress';
 
 function secondsToTime(time) {
     return ~~(time / 60) + ":" + (time % 60 < 10 ? "0" : "") + time % 60;
@@ -94,13 +95,9 @@ export default class VideoComponent extends React.Component {
                                 />
                             </View>
                         </TouchableWithoutFeedback>
-                        {/* <Text style={styles.duration}>
-                            {secondsToTime(Math.floor(this.state.progress * this.state.duration))}
-                        </Text> */}
 					</View>
 
 				</View>
-					
 			</View>
 		)
 	}
@@ -144,5 +141,5 @@ const styles = StyleSheet.create({
     duration: {
       color: "#FFF",
       marginLeft: 15,
-    },
+    }
   });
